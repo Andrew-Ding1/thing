@@ -111,21 +111,32 @@ img.photo{
     max-width: 50px;
 }
 
-.what{
+.what.active{
     display: flex;
     flex-direction: column;
     gap: 5px;
     background-color: var(--purple);
     color: black;
-    margin-top: 200px;
-    padding: 4px 16px;
+    margin-top: 32px;
     border-radius: 2px;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    height: fit-content;
+    overflow: hidden;
+    padding: 16px 8px;;
+}
+
+.what{
+  padding: 0px;
+  height: 0;
+  overflow: hidden;
+  transition: 0.2s;
+  overflow-y: auto;
 }
 
 .what-title{
     font-size: 1.25rem;
+    overflow: hidden;
 }
 
 .what-info{
@@ -134,6 +145,8 @@ img.photo{
     padding: 8px;
     font-size: 1.1rem;
     transition: .2ms;
+    overflow: hidden;
+    text-align: left;
 }
 
 
@@ -155,7 +168,7 @@ img.photo{
     background-color: gray;
 }
 
-li:hover{
+li.select:hover{
     background-color: gray;
     transition: .5s;
 }

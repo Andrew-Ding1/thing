@@ -5,6 +5,7 @@ const credit = document.querySelector(".creds");
 const contact = document.querySelector(".email-title");
 const image = document.querySelector(".image");
 const accordion = document.querySelector(".contentB");
+const what = document.querySelector(".what");
 
 const evan = {
   name: "Evan Meyer",
@@ -148,6 +149,7 @@ names.forEach((name) => {
   name.addEventListener("click", () => {
     names.forEach((name) => name.classList.remove("active"));
     accordion.classList.remove("active");
+    what.classList.remove("active");
     name.classList.toggle("active");
     changeInfo(name.dataset.name);
   });
@@ -170,4 +172,5 @@ const changeInfo = (name) => {
 
 accordion.addEventListener("click", () => {
   accordion.classList.toggle("active");
+  what.classList.toggle("active");
 });
